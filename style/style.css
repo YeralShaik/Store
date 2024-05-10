@@ -20,7 +20,9 @@ body {
     display: flex;
     color: #00417a;
     font-size: 18px;
-    border-bottom: 4px solid #ff63c7;
+    border-bottom: 4px solid var(--colorHover);
+    padding: 20px 200px;
+    margin: 0;
     
 }
 li {
@@ -33,43 +35,72 @@ li:hover {
     border-radius: 10px;
 }
 .bi-bag-heart-fill {
-    font-size: 50px;
+    font-size: 60px;
     margin-right: 50px;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-Container {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 100px;
-
-}
 .navbar-menu-desktop {
+
+    width: 100vw;
    display: flex; 
    gap: 24px;
    list-style: none;
+   align-items: center;
+    margin-left: 35vw;
 
+}
+.line {
+    border-right: 1px solid #00417a;
+    background-color: #00417a;
+    border-radius: 16px;
+    padding: 0;
+    margin: 0;
+    height: 40px;
 }
 
 .navbar-user-desktop{
     display: flex; 
     gap: 20px;
-    margin-left: 580px;
+    margin-left: 500px;
     list-style: none;
 }
 
-.bi-cart-fill,
+
+.bi-bag-fill,
 .bi-person-fill {
     font-size: 24px;
     cursor: pointer;
+
+}
+.bi-person-fill {
+    margin-right: 6px;
 }
 
-.bi-cart-fill:hover,
-.bi-person-fill:hover {
-    color: var(--colorHover);
-   
+.login-button {
+    width: 100px;
+    background: #ff63c7;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.bi-bag-fill:hover {
+    color: #f0128c;
+}
+.login-button:hover,
+button:hover {
+    background: var(--colorHover);
+    color: #fee5f6;
+}
+.login-button:active,
+button:active {
+    background: #d1056f;
+    color: #fee5f6;
 }
 .textBanner-container {
     color: var(--colorwhite100);
@@ -114,7 +145,8 @@ li:hover {
     font-size: 24px;
 }
 
-.allproducts-section{
+.allproducts-section,
+.allelectronicproducts-section{
     width: 72vw;
     display: flex;
     justify-content: center;
@@ -129,26 +161,28 @@ li:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 0;
     box-shadow: 2px 2px 2px 4px #f0128c21;
 
     border-radius: 8px;
-    align-items: center;
+
 }
 
 .product-card img {
     width: 40%;
     height: 50%;
     object-fit: fill;
+    align-self:  center;
 }
 
 .product-category {
-    font-size: 16px;
-    color: var(--colorsecondary);
+    font-size: 14px;
+    color: #00417a;
     padding-top: 8px;
     margin: 0;
+    text-align: left;
+    margin-left: 24px;
 }
 
 .product-name {
@@ -156,23 +190,32 @@ li:hover {
     margin-top:8px;
     width: 250px;
     padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-left: 24px;
 }
 .product-prices {
     font-size: 18px;
     font-weight: bold;
     color: var(--colorHover);
- 
+    text-align: left;
+    margin-left: 24px;
 }
 
-.bi-cart {
+.bi-bag-plus {
 
-    margin-left: 40px;
-    background: #f0128c;
-    color: #fee5f6;
-    padding: 8px;
-    font-size: 16px;
+    margin-left: 140px;
+
+    color: #012e55;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 26px;
+    cursor: pointer;
     border-radius: 50%;
 } 
+.bi-bag-plus:hover {
+    color: #f0128c;
+}
 .electronicImg-container{
     width: 100vw;
     display: flex;
@@ -223,7 +266,7 @@ li:hover {
 .subscribe-section{
     width: 100vw;
     height: auto;
-    background: var(--colordisabletext);
+    background: #00417a;
     color: var(--colordisable);
     padding:  40px 0px;
     display: flex;
@@ -244,12 +287,14 @@ input {
 
 
 button {
-    background: var(--colorBody950);
+    background: #ff63c7;
     border-radius: 16px;
     border: none;
     padding: 16px;
     width: 180px;
+    font-size: 16px;
     color: var(--colordisable);
+    cursor: pointer;
 }
 footer {
     background: #006dcc10;
