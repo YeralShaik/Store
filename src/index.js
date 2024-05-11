@@ -137,6 +137,15 @@ const productPrices = document.createElement('p')
 
     electronicsProductsContainer.appendChild(productCard)
 })
-}
 
 
+const menuMobileIcon = document.querySelector('.bi-list')
+const menuMobile = document.querySelector('.navbar-mobile')
+
+    menuMobileIcon.addEventListener('click', toggleMobile)
+        function toggleMobile() {
+            menuMobile.classList.toggle('inactive')
+            console.log('diste click')
+        }
+
+    }
