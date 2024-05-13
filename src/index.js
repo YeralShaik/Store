@@ -145,7 +145,24 @@ const menuMobile = document.querySelector('.navbar-mobile')
     menuMobileIcon.addEventListener('click', toggleMobile)
         function toggleMobile() {
             menuMobile.classList.toggle('inactive')
-            console.log('diste click')
+
         }
 
-    }
+
+productCard.addEventListener('click', toggleModalProductDetail)
+        function toggleModalProductDetail(){
+            productDetailModalContainer.classList.toggle('inactive')
+            console.log('diste click')
+        }
+//Modal product detail 
+const productDetailModalContainer = document.querySelector('.modal-product-Detail')
+const productDetail = document.createElement('div')
+
+const closeButton = document.querySelector('.bi-x-circle-fill')
+   
+      
+  
+
+
+
+}
