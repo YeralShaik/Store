@@ -27,7 +27,7 @@ body {
     margin: 0;
     
 }
-.navbar-mobile {
+.navbar-mobile.inactive {
     display: none;
 }
 li {
@@ -107,7 +107,71 @@ button:active {
     background: #d1056f;
     color: #fee5f6;
 }
+.shoppingCart-Container.inactive {
+    display: none;
+}
+.shoppingCart-Container {
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    top: 100px;
+    left: 850px;
+    width: 30vw;
+    height: 400px;
+    background: #ffff;
+    z-index: 99999;
+    border-radius: 12px;
+}
+.shoppingCart-Container h1 {
+    text-align: center;
+}
 
+.shoppingCart-products-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+}
+.img-shopping {
+    width: 90px;
+    border-radius: 8px;
+    margin-right: 18px;
+}
+.input-radio {
+    width: 15px;
+    margin-right: 10px;
+}
+.product-title{
+    font-size: 14px;
+}
+.input-number{
+    width: 25px;
+    border:  1px solid #00417a;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 28px;
+}
+
+.total-container {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 350px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.total-prices {
+    margin-left: 180px;
+}
+.button-shop {
+    width: 100px;
+    height: 40px;
+    padding: 6px;
+    border-radius: 8px;
+}
+/*main*/
 .textBanner-container {
     color: var(--colorwhite100);
     z-index: 3;
@@ -286,7 +350,6 @@ button:active {
     align-items: center;
 }
 .modal-product-Detail  {
-
     display: none;
 }
 .product-detail{
@@ -357,11 +420,11 @@ footer {
     padding: 20px 80px;
 }
 
-@media (min-width: 320px) and (max-width: 480px)  {
+@media (min-width: 320px) and (max-width: 767px)  {
     .navbar{
         width: auto;
         display: flex;
-        padding: 20px 60px;
+        padding: 20px 40px;
         margin: 0; 
         justify-content: space-between;
         align-items: center;
@@ -378,7 +441,9 @@ footer {
         margin-bottom: 12px;
 
     }
-
+    .navbar-mobile.inactive {
+        display: none;
+    }
     .bi-bag-heart-fill {
         font-size: 60px;
         margin-right: 50px;
@@ -394,6 +459,9 @@ footer {
         color: var(--colorHover);
         cursor: pointer;
     }
+    .bi-bag-fill {
+        margin-left: 220px;
+       } 
     .navbar-mobile {
         top: 110px;
         color: #f0128c;
@@ -409,9 +477,7 @@ footer {
         margin-bottom: 16px;
 
     }
-.navbar-mobile.inactive{
-    display: none;
-}
+
 
     
 .navbar-user-desktop{
@@ -473,16 +539,18 @@ footer {
     }
 
     .products-section{
-
+        width: 100vw;
         display: flex;
         flex-direction: column;
-        padding: 24px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
         font-size: 24px;
     }
     
     .allproducts-section,
     .allelectronicproducts-section{
-        width: 40vw;
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -552,6 +620,7 @@ footer {
     .electronic-textBanner-container p{
         font-size: 14px;
         padding-left: 14px ;
+        order: 1;
     
     }
     .electronic-textBanner-container h1 {
@@ -560,6 +629,7 @@ footer {
         color: var(--colordisable);
         padding-left: 14px ;
         text-shadow: 2px 2px 2px #4d0025;
+        order: 2;
     
     }
     .subscribe-section{
@@ -609,6 +679,7 @@ footer {
             font-size: 40px;
             color: var(--colorHover);
             cursor: pointer;
+
         }
         .navbar-mobile {
             top: 110px;
@@ -623,13 +694,16 @@ footer {
             z-index: 99999;
             text-align: left;
             margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
     
         }
-    .navbar-mobile.inactive{
-        display: none;
-    }
-    
-        
+
+       .bi-bag-fill {
+        margin-left: 480px;
+       } 
     .navbar-user-desktop{
             display: flex; 
             gap: 20px;

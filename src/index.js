@@ -13,7 +13,7 @@ fetch('https://fakestoreapi.com/products?limit=3')
               console.error('Error:', error)
             })
 
-
+//Obener solo los productos electronicos
 fetch('https://fakestoreapi.com/products/category/electronics?limit=3')
             .then(response => {
                 if(!response.ok) {
@@ -27,10 +27,11 @@ fetch('https://fakestoreapi.com/products/category/electronics?limit=3')
             .catch((error) => {
               console.error('Error:', error)
             })
-
-    function getAllProduct(products) {
+//funcion para obtener todos los productos
+function getAllProduct(products) {
     const allproductsContainer = document.querySelector('.allproducts-section')
         allproductsContainer.innerHTML = ''
+
 
 products.forEach((product) => {
         
@@ -53,7 +54,7 @@ products.forEach((product) => {
         productPrices.className = 'product-prices'
         productPrices.innerText = `$${product.price.toFixed(2)}`;
 
-
+// Agregar el ícono para agregar al cart
         const cartIcon = document.createElement('svg')
         cartIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
         cartIcon.setAttribute('width', '18')
@@ -84,7 +85,7 @@ products.forEach((product) => {
 })
 } 
 
-
+//Funcion para obtener los productos electronicos
 function getElectronicsProducts(products) {
     const electronicsProductsContainer = document.querySelector('.allelectronicproducts-section')
        electronicsProductsContainer.innerHTML = ''
@@ -93,21 +94,21 @@ products.forEach((product) => {
     const productCard = document.createElement('div')
     productCard.className = 'product-card'
 
-const productImg = document.createElement('img')
-    productImg.src = product.image   
-    productImg.alt = product.title
+    const productImg = document.createElement('img')
+        productImg.src = product.image   
+        productImg.alt = product.title
 
-const productCategory = document.createElement('p')
-    productCategory.className = 'product-category'
-    productCategory.innerText = product.category
+    const productCategory = document.createElement('p')
+        productCategory.className = 'product-category'
+        productCategory.innerText = product.category
 
-const productName = document.createElement('h3')
-    productName.className ='product-name'
-    productName.innerText = product.title
+    const productName = document.createElement('h3')
+        productName.className ='product-name'
+        productName.innerText = product.title
 
-const productPrices = document.createElement('p')
-    productPrices.className = 'product-prices'
-    productPrices.innerText = `$${product.price.toFixed(2)}`;
+    const productPrices = document.createElement('p')
+        productPrices.className = 'product-prices'
+        productPrices.innerText = `$${product.price.toFixed(2)}`;
 
 
     const cartIcon = document.createElement('svg')
@@ -138,31 +139,25 @@ const productPrices = document.createElement('p')
     electronicsProductsContainer.appendChild(productCard)
 })
 
-
-const menuMobileIcon = document.querySelector('.bi-list')
-const menuMobile = document.querySelector('.navbar-mobile')
-
-    menuMobileIcon.addEventListener('click', toggleMobile)
-        function toggleMobile() {
-            menuMobile.classList.toggle('inactive')
-
-        }
-
-
-productCard.addEventListener('click', toggleModalProductDetail)
-        function toggleModalProductDetail(){
-            productDetailModalContainer.classList.toggle('inactive')
-            console.log('diste click')
-        }
-//Modal product detail 
-const productDetailModalContainer = document.querySelector('.modal-product-Detail')
-const productDetail = document.createElement('div')
-
-const closeButton = document.querySelector('.bi-x-circle-fill')
-   
-      
-  
-
-
-
 }
+
+const menuMobile = document.querySelector('.navbar-mobile')
+const menuMobileIcon = document.querySelector('.bi-list')
+
+    menuMobileIcon.addEventListener('click', toggleMenuMobile)
+        function toggleMenuMobile() {
+            menuMobile.classList.toggle('inactive')
+            console.log('funciona')
+    }
+
+
+const shopBag = document.querySelector('.bi-bag-fill')
+
+const shoppingBagContainer = document.querySelector('.shoppingCart-Container')
+
+    shopBag.addEventListener('click', toggleshoppingBag)
+        function toggleshoppingBag() {
+            shoppingBagContainer.classList.toggle('inactive')
+
+            console.log('click')
+        }
