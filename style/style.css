@@ -52,8 +52,12 @@ p {
  .bi-person-fill-mobile.inactive {
     display: none;
 }
-
-.menudesktop-list {
+.navbar-menu-desktop a,
+.navbar-mobile a {
+    list-style: none;
+    text-decoration: none;
+}
+.menudesktop-list  {
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -62,7 +66,7 @@ p {
     cursor: pointer;
     font-weight: 700;
 }
-.menudesktop-list li:hover {
+.menudesktop-list a:hover {
     color: var(--colordisable);
     background: var(--colorHover);
     padding: 6px;
@@ -299,7 +303,7 @@ form {
 
 .banner-section {
     background: #fee5f6;
-    width: 900px;
+    width: auto;
     height: 500px;
     display: flex;
 
@@ -328,7 +332,7 @@ form {
     color: var(--colorwhite100);
     z-index: 3;
     position: absolute;
-    top: 60%;
+    top: 40%;
     left: 60%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -346,7 +350,8 @@ form {
     color: var(--colorprimary500);
     text-shadow: 2px 2px 2px #4d0025;
 }
-.products-section{
+.products-section,
+.products-electronics-section {
     width: auto ;
     height: auto;
     display: flex;
@@ -473,6 +478,32 @@ form {
 
 }
 
+.title-section {
+    position: absolute;
+    top: 180px;
+    font-size: 2rem;
+}
+
+.women-section,
+.men-section,
+.electronic-section,
+.accesories-section {
+    width: auto;
+    padding: 3rem;
+    margin-top: 100px;   
+}
+
+.women-products-container,
+.electronic-products-container,
+.accesories-products-container,
+.men-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
 .modal-product-Detail {
     width: 100%;
     height: 100%;

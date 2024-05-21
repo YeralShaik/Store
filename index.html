@@ -13,7 +13,7 @@
   
     <header>
         <nav class="navbar">
-            <i class="bi bi-bag-heart-fill"></i>
+            <i class="bi bi-bag-heart-fill" id="logoIcon" alt="logo - bolso azul de corazon"></i>
             
             <i class="bi bi-list inactive"></i>
             <i class="bi bi-bag-fill"></i>
@@ -21,10 +21,11 @@
             <div class="navbar-menu-desktop inactive">
                 
                 <ul class="menudesktop-list">
-                    <li class="women-category">Women</li>
-                    <li class="men-category">Men</li>
-                    <li class="electronic-category">Electronics</li>
-                    <li class="accesories-category">Accesories </li>
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#women" class="women-category">Women</a></li>
+                    <li><a href="#men" class="men-category">Men</a></li>
+                    <li><a href="#electronics" class="electronic-category">Electronics</a></li>
+                    <li><a href="#accesories" class="accesories-category">Accesories</a></li>
                 </ul>
                 <div class="line"></div>
                 
@@ -36,17 +37,18 @@
             </div>
             
             <div class="navbar-mobile inactive">
-              
                 <ul class="menumobile-list">
-                    <li class="women-category">Women</li>
-                    <li class="men-category">Men</li>
-                    <li class="electronic-category">Electronics</li>
-                    <li class="accesories-category">Accesories </li>
+                    <li><a href="#home" class="home">Home</a></li>
+                    <li><a href="#women" class="women-category">Women</a></li>
+                    <li><a href="#men" class="men-category">Men</a></li>
+                    <li><a href="#electronics" class="electronic-category">Electronics</a></li>
+                    <li><a href="#accesories" class="accesories-category">Accesories</a></li>
+                    <button class="login-button-mobile">
+                        <i class="bi bi-person-fill"></i>
+                        Login
+                    </button>
                 </ul>
-                <button class="login-button-mobile">
-                    <i class="bi bi-person-fill"></i>
-                    Login
-                </button>
+               
             </div>
                
 
@@ -99,8 +101,7 @@
     </header>
     
     <section class="banner-section">
-       
-            <div class="banner-color "></div>
+            <div class="banner-color"></div>
             <img class="img-banner" src="https://img.freepik.com/free-photo/image-happy-young-woman-carry-lots-shopping-bags-buying-things-spring-discounts-standing-blue-background_1258-122063.jpg?t=st=1715292711~exp=1715296311~hmac=cb580851332aa7bf419ade28392d1defe004d8a7f3d5eff43f6d595b97cc3903&w=996" alt="img banner">
             <div class="textBanner-container">
                 <p>Ofertas Exclusivas</p>
@@ -116,7 +117,7 @@
         </div> 
     </section>
 
-    <section class="electronic-banner-section inactive">
+    <section class="electronic-banner-section">
         <div class="electronicImg-container ">
             <div class="electronic-textBanner-container">
                 <p>Ofertas Exclusivas</p>
@@ -125,19 +126,37 @@
             </div>
             <img src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/734546229001/869bfaca-9962-4ad1-892e-61110c5407c9/2212939c-5b90-4be2-9cee-673c290b8a1a/1920x1080/match/image.jpg" alt="img banner">
         </div>
-        <section class="products-section hide"> 
-            <h1>Electronic Products</h1>
-            <div class="allelectronicproducts-section "> 
+    </section>
+    <section class="products-electronics-section"> 
+        <h1>Electronic Products</h1>
+            <div class="allelectronicproducts-section">
+                <div class="product-card"></div>
             </div>
         </section>
-    </section>
+
     <section class="women-section hide">
-        <h1>Women</h1>
-        <section class="products-section"> 
-            <h1>Featured Products</h1>
-            <div class="allproducts-section"> 
-                <div class="product-card"></div>
-            </div> 
+        <div class="women-products-container"> 
+            <div class="product-card"></div>
+        </div>
+        </section>
+    </section>
+    <section class="men-section hide">
+        <div class="men-products-container"> 
+            <div class="product-card"></div>
+        </div>
+        </section>
+    </section>
+    <section class="electronic-section hide">
+        <div class="electronic-products-container"> 
+            <div class="product-card"></div>
+        </div>
+        
+        </section>
+    </section>
+    <section class="accesories-section hide">
+        <div class="accesories-products-container"> 
+            <div class="product-card"></div>
+        </div>
         </section>
     </section>
     <section class="subscribe-section">

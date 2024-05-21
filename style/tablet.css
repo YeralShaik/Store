@@ -1,6 +1,8 @@
 
 @media only screen and (max-width: 768px) {
-
+    .hide {
+        display: none;
+    }
 .navbar{
     width: auto;
     padding: 1rem 2.5rem; 
@@ -62,13 +64,13 @@
     padding: 20px;
 }
 
-.menumobile-list li {
+.menumobile-list a {
     padding: 8px;
     width: 120px;
     height: 20px;
 }
 
-.menumobile-list li:hover {
+.menumobile-list a:hover {
     color: var(--colordisable);
     background: var(--colorHover);
     width: 120px;
@@ -440,7 +442,27 @@ form {
     text-shadow: 2px 2px 2px #4d0025;
 
 }
+.women-section,
+.men-section,
+.electronic-section,
+.accesories-section {
+    width: auto;
+    padding: 3rem;
+    margin-top: 100px;   
+}
 
+.women-products-container,
+.electronic-products-container,
+.accesories-products-container,
+.men-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+.mo
 .modal-product-Detail {
     width: 100%;
     height: 100%;
