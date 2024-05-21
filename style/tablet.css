@@ -1,73 +1,22 @@
 
-:root {
-    --colorprimary500: #ff42b3;
-    --colorsecondary: #006dcc;
-    --colorBody950: #58002b;
-    --colortext800: #ad075b;
-    --colorwhite100: #fef1f9;
-    --colorHover: #f0128c;
-    --colordisable: #fee5f6;
-    --colordisabletext:#ff63c7;
-    --colorblack:#0f0007;
-    --font-base: 16px;
-    
-}
+@media only screen and (max-width: 768px) {
 
-html {
-    font-size: var(--font-base);
-}
-
-body {
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #00417a ;
-    margin: 0;
-}
-
-h1 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1rem;
-}
-.hide {
-    display: none;
-}
 .navbar{
     width: auto;
-    display: flex;
-    justify-content: center;
+    padding: 1rem 2.5rem; 
+    justify-content: space-evenly;  
     align-items: center;
-    padding: 2rem 12.5rem;
-    color: #00417a;
-    font-size: 1rem;
-    border-bottom: 4px solid var(--colorHover);
-    margin: auto;
-    
-}
-.navbar-mobile.inactive,
- .bi-list.inactive,
- .menumobile-list,
- .bi-person-fill-mobile.inactive {
-    display: none;
+
 }
 
-.menudesktop-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.bi-list.inactive {
+    display: inline;
 }
-.menudesktop-list li {
-    cursor: pointer;
-    font-weight: 700;
-}
-.menudesktop-list li:hover {
-    color: var(--colordisable);
-    background: var(--colorHover);
-    padding: 6px;
-    text-align: center;
-    border-radius: 6px;
+.bi-list {
+    color: #f0128c;
+    font-size: 2.25rem;
+    margin-left: 450px;
+
 }
 .bi-bag-heart-fill {
     font-size: 60px;
@@ -76,16 +25,58 @@ p {
 }
 
 .navbar-menu-desktop {
+    display: none;
+}
 
-    width: auto;
+.navbar-mobile {
+    top: 100px;
+    color: #f0128c;
+    left: 70%;
+    position: absolute;
     display: flex;
     justify-content: center;
-   gap: 30px;
-   list-style: none;
-   align-items: center;
-    margin-left: 15vw;
-
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 140px;  
+    height: auto;
+    padding: 16px;
+    border-radius: 8px;
+    height: auto;
+    background: #ffff;
+    z-index: 99999;
+    margin-bottom: 16px;
 }
+.menumobile-list {
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 8px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+}
+
+.menumobile-list li {
+    padding: 8px;
+    width: 120px;
+    height: 20px;
+}
+
+.menumobile-list li:hover {
+    color: var(--colordisable);
+    background: var(--colorHover);
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+
 .line {
     border-right: 1px solid #00417a;
     background-color: #00417a;
@@ -93,7 +84,6 @@ p {
     padding: 0;
     margin: 0;
     height: 40px;
-
 }
 
 .navbar-user-desktop{
@@ -102,24 +92,15 @@ p {
     list-style: none;
 }
 
-.bi-bag-fill{
-    
+.bi-bag-fill,
+.bi-person-fill-mobile{
     font-size: 24px;
     cursor: pointer;
     order: 1;
     margin-left: 20px;
 
 }
-.bi-person-fill {
-    font-size: 24px;
-    cursor: pointer;
-
-}
-.bi-person-fill {
-    margin-right: 6px;
-}
-
-.login-button {
+.login-button-mobile {
     width: 100px;
     background: #ff63c7;
     padding: 10px;
@@ -129,7 +110,6 @@ p {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
 }
 
 .bi-bag-fill:hover {
@@ -157,8 +137,8 @@ button:active {
     margin: 0;
     padding: 20px;
     top: 100px;
-    left: 850px;
-    width: 30vw;
+    left: 250px;
+    width: 55vw;
     height: 400px;
     background: #ffff;
     z-index: 99999;
@@ -221,8 +201,6 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .sign-account.inactive,
@@ -240,9 +218,8 @@ button:active {
     border-radius: 12px;
     background: #ffff;
     position: absolute;
-   
     top: 100px;
-    left: 900px;
+    left: 25rem;
     z-index: 9999;
 }
 .create-Account {
@@ -256,7 +233,7 @@ button:active {
     background: #ffff;
     position: absolute;
     top: 100px;
-    left: 900px;
+    left: 25rem;
     z-index: 9999;
 }
 
@@ -296,22 +273,38 @@ form {
 }
 
 /*main*/
-
-.banner-section {
-    background: #fee5f6;
-    width: 900px;
-    height: 500px;
-    display: flex;
-
+.textBanner-container {
+    color: var(--colorwhite100);
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px;
+    
 }
-
-.img-banner {
-    width: 100%;
+.textBanner-container p{
+    font-size: 32px;
+    margin: 0;
+    padding: 5px 0;
+    text-shadow: 1px 1px 1px #4d0025;
+}
+.textBanner-container h1 {
+    font-size: 50px;
+    margin: 0;
+    color: var(--colorprimary500);
+    text-shadow: 2px 2px 2px #4d0025;
+}
+.bannerImg-container {
+    max-width: 100%;
+}
+.bannerImg-container img {
+    width: 100vw;
     height: 500px;
     object-fit: cover;
     z-index: 1;
     position: relative;
-    
 
 }
 .banner-color {
@@ -320,31 +313,6 @@ form {
     height: 500px;
     z-index: 2;
     position: absolute;
-    position: absolute;
-   
-
-}
-.textBanner-container {
-    color: var(--colorwhite100);
-    z-index: 3;
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-.textBanner-container p{
-    font-size: 2rem;
-    margin: 0;
-    padding: 5px 0;text-shadow: 1px 1px 1px #4d0025;
-}
-.textBanner-container h1 {
-    font-size: 50px;
-    margin: 0;
-    color: var(--colorprimary500);
-    text-shadow: 2px 2px 2px #4d0025;
 }
 .products-section{
     width: auto ;
@@ -555,4 +523,5 @@ footer {
     color: var(--colorBody950);
     text-align: center;
     padding: 20px 80px;
+}
 }

@@ -1,5 +1,6 @@
-//llamado al API
-fetch('https://fakestoreapi.com/products?limit=3')
+const apiUrl = 'https://fakestoreapi.com/products'
+
+fetch(`${apiUrl}?limit=3`)
             .then(response => {
                 if(!response.ok) {
                     throw new Error('error de red:' + response.statusText)
@@ -8,13 +9,14 @@ fetch('https://fakestoreapi.com/products?limit=3')
             })
             .then((data) => {
               getAllProduct(data)
+
             })
             .catch((error) => {
               console.error('Error:', error)
             })
 
-//Obener solo los productos electronicos
-fetch('https://fakestoreapi.com/products/category/electronics?limit=3')
+
+fetch(`${apiUrl}/category/electronics?limit=3`)
             .then(response => {
                 if(!response.ok) {
                     throw new Error('error de red:' + response.statusText)
@@ -23,11 +25,15 @@ fetch('https://fakestoreapi.com/products/category/electronics?limit=3')
             })
             .then((data) => {
               getElectronicsProducts(data)
+
             })
             .catch((error) => {
               console.error('Error:', error)
+         
             })
-//funcion para obtener todos los productos
+
+
+
 function getAllProduct(products) {
     const allproductsContainer = document.querySelector('.allproducts-section')
         allproductsContainer.innerHTML = ''
@@ -54,7 +60,7 @@ products.forEach((product) => {
         productPrices.className = 'product-prices'
         productPrices.innerText = `$${product.price.toFixed(2)}`;
 
-// Agregar el ícono para agregar al cart
+// icono para agregar al cart
         const cartIcon = document.createElement('svg')
         cartIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
         cartIcon.setAttribute('width', '18')
@@ -85,7 +91,6 @@ products.forEach((product) => {
 })
 } 
 
-//Funcion para obtener los productos electronicos
 function getElectronicsProducts(products) {
     const electronicsProductsContainer = document.querySelector('.allelectronicproducts-section')
        electronicsProductsContainer.innerHTML = ''
@@ -127,7 +132,7 @@ products.forEach((product) => {
 
     cartIcon.appendChild(path)
 
-    // Agregar el ícono al elemento de precios
+
     productPrices.appendChild(cartIcon)
 
 
@@ -139,25 +144,13 @@ products.forEach((product) => {
     electronicsProductsContainer.appendChild(productCard)
 })
 
+
+
+
 }
 
-const menuMobile = document.querySelector('.navbar-mobile')
-const menuMobileIcon = document.querySelector('.bi-list')
-
-    menuMobileIcon.addEventListener('click', toggleMenuMobile)
-        function toggleMenuMobile() {
-            menuMobile.classList.toggle('inactive')
-            console.log('funciona')
-    }
 
 
-const shopBag = document.querySelector('.bi-bag-fill')
 
-const shoppingBagContainer = document.querySelector('.shoppingCart-Container')
 
-    shopBag.addEventListener('click', toggleshoppingBag)
-        function toggleshoppingBag() {
-            shoppingBagContainer.classList.toggle('inactive')
 
-            console.log('click')
-        }
