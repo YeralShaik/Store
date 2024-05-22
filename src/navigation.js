@@ -108,3 +108,13 @@ function toggleShoppingBag() {
     menuMobile.classList.add('inactive')
     createAccountContainer.classList.add('inactive')
 }
+
+
+const modalProductDescription = document.querySelector('.modal-product-Detail')
+
+const productCard = document.querySelector('.product-card')
+productCard.addEventListener('click', toggleModal)
+    function toggleModal() {
+        modalProductDescription.classList.toggle('inactive')
+        console.log('click')
+    }

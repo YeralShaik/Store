@@ -34,6 +34,7 @@ p {
 .hide {
     display: none;
 }
+
 .navbar{
     width: auto;
     display: flex;
@@ -41,10 +42,9 @@ p {
     align-items: center;
     padding: 2rem 12.5rem;
     color: #00417a;
-    font-size: 1rem;
-    border-bottom: 4px solid var(--colorHover);
-    margin: auto;
-    
+    font-size: 1.12rem;
+    border-bottom: 2px solid var(--colorHover);
+    margin: auto;  
 }
 .navbar-mobile.inactive,
  .bi-list.inactive,
@@ -166,7 +166,8 @@ button:active {
     height: 400px;
     background: #ffff;
     z-index: 99999;
-    border-radius: 12px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px #00417a46;
 }
 .shoppingCart-Container h1 {
     text-align: center;
@@ -244,7 +245,7 @@ button:active {
     border-radius: 12px;
     background: #ffff;
     position: absolute;
-   
+    box-shadow: 1px 1px 1px 1px #00417a46;
     top: 100px;
     left: 900px;
     z-index: 9999;
@@ -262,6 +263,7 @@ button:active {
     top: 100px;
     left: 900px;
     z-index: 9999;
+    box-shadow: 1px 1px 1px 1px #00417a46;
 }
 
 form {
@@ -378,9 +380,10 @@ form {
     flex-direction: column;
     justify-content: center;
     margin: 0;
-    box-shadow: 2px 2px 2px 4px #f0128c21;
+    box-shadow: 2px 2px 2px 2px #012e5533; 
     cursor: pointer;
     border-radius: 8px;
+    background: #ffff;
 
 }
 
@@ -439,7 +442,7 @@ form {
     padding: 2rem 12.5rem;
 }
 .electronicImg-container img {
-    width: 100vw;
+    width: 100%;
     height: 350px;
     object-fit: cover;
     z-index: 1;
@@ -490,7 +493,7 @@ form {
 .accesories-section {
     width: auto;
     padding: 3rem;
-    margin-top: 100px;   
+    background: #012e550e;
 }
 
 .women-products-container,
@@ -503,6 +506,7 @@ form {
     align-items: center;
     text-align: center;
     gap: 40px;
+    padding-top: 100px;
 }
 .modal-product-Detail {
     width: 100%;

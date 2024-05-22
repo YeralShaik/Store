@@ -1,5 +1,4 @@
-
-@media only screen and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
     .hide {
         display: none;
     }
@@ -79,31 +78,8 @@
     border-radius: 6px;
 }
 
-.line {
-    border-right: 1px solid #00417a;
-    background-color: #00417a;
-    border-radius: 16px;
-    padding: 0;
-    margin: 0;
-    height: 40px;
-}
-
-.navbar-user-desktop{
-    display: flex; 
-    gap: 20px;
-    list-style: none;
-}
-
-.bi-bag-fill,
-.bi-person-fill-mobile{
-    font-size: 24px;
-    cursor: pointer;
-    order: 1;
-    margin-left: 20px;
-
-}
 .login-button-mobile {
-    width: 100px;
+    width: auto;
     background: #ff63c7;
     padding: 10px;
     font-size: 16px;
@@ -114,92 +90,72 @@
     cursor: pointer;
 }
 
-.bi-bag-fill:hover {
-    color: #f0128c;
-}
-
-.login-button:hover,
-button:hover {
-    background: var(--colorHover);
-    color: #fee5f6;
-}
-
-.login-button:active,
-button:active {
-    background: #d1056f;
-    color: #fee5f6;
-}
 
 .shoppingCart-Container.inactive {
     display: none;
 }
 
 .shoppingCart-Container {
-    position: absolute;
-    margin: 0;
-    padding: 20px;
+    padding: 10px;
     top: 100px;
-    left: 250px;
-    width: 55vw;
-    height: 400px;
-    background: #ffff;
-    z-index: 99999;
-    border-radius: 12px;
+    left: 290px;
+    width: 50vw;
+    height: 350px;
+
 }
 .shoppingCart-Container h1 {
-    text-align: center;
+    font-size: 1.25rem;
 }
 
 .shoppingCart-products-container {
-    width: 80%;
+    width: auto;
     display: flex;
     align-items: center;
     padding: 10px 20px;
     justify-content: space-evenly;
 }
 .img-shopping {
-    width: 90px;
+    width: 70px;
     border-radius: 8px;
-    margin-right: 18px;
+    margin-right: 10px;
 }
 .input-radio {
     width: 15px;
-    margin-right: 10px;
+    margin-right: 6px;
 }
 .product-title{
-    font-size: 14px;
+    font-size: 12px;
 }
 .input-number{
     width: 25px;
     border:  1px solid #00417a;
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
     margin-left: 28px;
 }
 
 .total-container {
-    width: 100%;
+    width: auto;
     display: flex;
     position: absolute;
-    top: 350px;
-    padding: 10px 20px;
+    top: 250px;
+    padding: 20px;
     align-items: center;
 }
 
 .total-prices {
-    margin-left: 180px;
+    margin-left: 160px;
 }
 .button-shop {
     width: 100px;
     height: 40px;
-    padding: 6px;
+    padding: 8px;
     border-radius: 8px;
 }
 
 /*Login container */
 .Login-container {
-  
-    width: auto;
+    width: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -212,37 +168,22 @@ button:active {
 
 .sign-account{
     width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; 
-    border-radius: 12px;
-    background: #ffff;
-    position: absolute;
     top: 100px;
-    left: 25rem;
-    z-index: 9999;
+    left: 350px;
+  
 }
 .create-Account {
     width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; 
-    border-radius: 12px;
-    background: #ffff;
-    position: absolute;
     top: 100px;
-    left: 25rem;
+    left: 350px;
     z-index: 9999;
 }
 
 form {
-
+    width: 100%;
     display: flex;
     flex-direction: column;
+
 }
 .sign-account p {
     font-size: 16px;
@@ -259,7 +200,7 @@ form {
 .button-continue,
 .button-create {
     height: 48px;
-    width: auto;
+    width: 80%;
     padding: 16px;
     text-align: center;
     font-size: 16px;
@@ -269,144 +210,62 @@ form {
 .create-Account input {
     width: auto;
     background: #fef1f95e;
-    margin: 8px;
-    font-size: 16px;
-    border: 1px solid #006dcc3a;
+
+}
+.banner-section {
+    width: auto;
+    height: 400px;
 }
 
-/*main*/
 .textBanner-container {
-    color: var(--colorwhite100);
-    z-index: 3;
-    position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 45%;
+    left: 56%;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 20px;
+
     
 }
 .textBanner-container p{
-    font-size: 32px;
-    margin: 0;
-    padding: 5px 0;
-    text-shadow: 1px 1px 1px #4d0025;
+    font-size: 20px;
 }
 .textBanner-container h1 {
-    font-size: 50px;
-    margin: 0;
-    color: var(--colorprimary500);
-    text-shadow: 2px 2px 2px #4d0025;
+    font-size: 40px;
 }
 .bannerImg-container {
     max-width: 100%;
+    height: 400px;
 }
-.bannerImg-container img {
+
+.img-banner {
     width: 100vw;
-    height: 500px;
-    object-fit: cover;
-    z-index: 1;
-    position: relative;
+    height: 400px;
+
 
 }
-.banner-color {
-    background: #02075396;
-    width: 100vw;
-    height: 500px;
-    z-index: 2;
-    position: absolute;
+.banner-color {   
+    height: 400px;
+
 }
-.products-section{
-    width: auto ;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 12.5rem;
-    font-size: 24px;
-}
+
 
 .allproducts-section,
 .allelectronicproducts-section{
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    padding: 20px 80px;
-    gap: 30px;
-}
-.product-card {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    box-shadow: 2px 2px 2px 4px #f0128c21;
-    cursor: pointer;
-    border-radius: 8px;
-
+      flex-wrap: wrap;
+  
 }
 
-.product-card img {
-    width: 40%;
-    height: 50%;
-    object-fit: fill;
-    align-self:  center;
-}
 
-.product-category {
-    font-size: 14px;
-    color: #00417a;
-    padding-top: 8px;
-    margin: 0;
-    text-align: left;
-    margin-left: 24px;
-}
-
-.product-name {
-    font-size: 18px;
-    margin-top:8px;
-    width: 250px;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    margin-left: 24px;
-}
-.product-prices {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--colorHover);
-    text-align: left;
-    margin-left: 24px;
-}
-
-.bi-bag-plus {
-    margin-left: 140px;
-
-    color: #012e55;
-    padding: 8px 10px;
-    text-align: center;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 50%;
-} 
-.bi-bag-plus:hover {
-    color: #f0128c;
-}
 .electronicImg-container{
     width: auto;
     display: flex;
     align-items: center;
     margin: 0;
     background-color: #00417a;
-    padding: 2rem 12.5rem;
+    padding: 2rem ;
 }
 .electronicImg-container img {
-    width: 100vw;
-    height: 350px;
-    object-fit: cover;
+    width: 50%;
+    height:auto;
+    object-fit: fill;
     z-index: 1;
     position: relative;
     left: 0px;
@@ -415,40 +274,30 @@ form {
 }
 .electronicbanner-color{ 
     width: auto;
-    height: 350px;
+    height: 250px;
     z-index: 2;
     position: absolute;
     background: #0f0007;
 
 }
-.electronic-textBanner-container  {
-    color: var(--colordisable);
-    z-index: 3;
-    padding: 10px;
-    width: 50vw;
 
-   
-}
 .electronic-textBanner-container p {
-    font-size: 24px;
-    padding-left: 14px ;
+    font-size: 20px;
 
 }
 .electronic-textBanner-container h1 {
-    font-size: 45px;
-    margin: 0;
-    color: var(--colordisable);
-    padding-left: 14px ;
-    text-shadow: 2px 2px 2px #4d0025;
-
+    font-size: 32px;
 }
+
 .women-section,
 .men-section,
 .electronic-section,
 .accesories-section {
     width: auto;
     padding: 3rem;
-    margin-top: 100px;   
+    margin-top: 100px;  
+
+
 }
 
 .women-products-container,
@@ -461,8 +310,9 @@ form {
     align-items: center;
     text-align: center;
     gap: 40px;
+
 }
-.mo
+
 .modal-product-Detail {
     width: 100%;
     height: 100%;
@@ -502,48 +352,9 @@ form {
     color: #f0128c;
 }
 .subscribe-section{
-    width: 100vw;
-    height: auto;
-    background: #00417a;
-    color: var(--colordisable);
-    padding:  40px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    
-}
-
-input {
-    border-radius: 10px;
-    border: none;
-    height: auto;
-    width: 300px;
-    padding: 16px;
-   
-}
-
-
-button {
-    background: #ff63c7;
-    border-radius: 16px;
-    border: none;
-    padding: 16px;
-    width: 180px;
-    font-size: 16px;
-    color: var(--colordisable);
-    cursor: pointer;
-}
-footer {
-    background: #006dcc10;
+    padding:  40px;
     width: auto;
-    height: auto;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--colorBody950);
-    text-align: center;
-    padding: 20px 80px;
+ 
 }
+
 }
