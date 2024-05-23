@@ -2,12 +2,15 @@
 :root {
     --colorprimary500: #ff42b3;
     --colorsecondary: #006dcc;
+    --colorsecondary-950: #07274A;
+    --colorsecondary-400: #7CC3FD;
+    --colorsecondary-50: #F0F7FF;
     --colorBody950: #58002b;
     --colortext800: #ad075b;
     --colorwhite100: #fef1f9;
     --colorHover: #f0128c;
     --colordisable: #fee5f6;
-    --colordisabletext:#ff63c7;
+    --colordisabletext:#FF9FDF;
     --colorblack:#0f0007;
     --font-base: 16px;
     
@@ -304,53 +307,19 @@ form {
 /*main*/
 
 .banner-section {
-    background: #fee5f6;
+
     width: auto;
-    height: 500px;
+    height: 350px;
     display: flex;
 
 }
 
 .img-banner {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
-    z-index: 1;
-    position: relative;
     
 
-}
-.banner-color {
-    background: #02075396;
-    width: 100vw;
-    height: 500px;
-    z-index: 2;
-    position: absolute;
-    position: absolute;
-   
-
-}
-.textBanner-container {
-    color: var(--colorwhite100);
-    z-index: 3;
-    position: absolute;
-    top: 40%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-.textBanner-container p{
-    font-size: 2rem;
-    margin: 0;
-    padding: 5px 0;text-shadow: 1px 1px 1px #4d0025;
-}
-.textBanner-container h1 {
-    font-size: 50px;
-    margin: 0;
-    color: var(--colorprimary500);
-    text-shadow: 2px 2px 2px #4d0025;
 }
 .products-section,
 .products-electronics-section {
@@ -358,7 +327,7 @@ form {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 2rem 12.5rem;
+    padding: 4rem 12.5rem;
     font-size: 24px;
 }
 
@@ -433,54 +402,15 @@ form {
 .bi-bag-plus:hover {
     color: #f0128c;
 }
-.electronicImg-container{
+.electronic-banner-section{
     width: auto;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    background-color: #00417a;
-    padding: 2rem 12.5rem;
+ 
 }
-.electronicImg-container img {
+.electronic-banner-section img {
     width: 100%;
-    height: 350px;
     object-fit: cover;
-    z-index: 1;
-    position: relative;
-    left: 0px;
-
-
-}
-.electronicbanner-color{ 
-    width: auto;
     height: 350px;
-    z-index: 2;
-    position: absolute;
-    background: #0f0007;
-
 }
-.electronic-textBanner-container  {
-    color: var(--colordisable);
-    z-index: 3;
-    padding: 10px;
-    width: 50vw;
-
-   
-}
-.electronic-textBanner-container p {
-    font-size: 24px;
-    padding-left: 14px ;
-
-}
-.electronic-textBanner-container h1 {
-    font-size: 45px;
-    margin: 0;
-    color: var(--colordisable);
-    padding-left: 14px ;
-    text-shadow: 2px 2px 2px #4d0025;
-
-}
-
 .title-section {
     position: absolute;
     top: 180px;
@@ -492,10 +422,15 @@ form {
 .electronic-section,
 .accesories-section {
     width: auto;
-    padding: 3rem;
-    background: #012e550e;
+    padding-bottom: 4rem;
 }
 
+.women-section img,
+.electronic-section img,
+.accesories-section img {
+    height: 400px;
+    object-fit: cover;
+}
 .women-products-container,
 .electronic-products-container,
 .accesories-products-container,
@@ -507,6 +442,8 @@ form {
     text-align: center;
     gap: 40px;
     padding-top: 100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 .modal-product-Detail {
     width: 100%;
@@ -533,7 +470,7 @@ form {
 }
 .bi-x-circle-fill {
         width: auto;
-        color: #00417a;
+        color: var(--colorsecondary-950);
         padding: 16px;
         font-size: 40px;
         border-radius: 50px;
@@ -549,7 +486,7 @@ form {
 .subscribe-section{
     width: 100vw;
     height: auto;
-    background: #00417a;
+    background: var(--colorsecondary);
     color: var(--colordisable);
     padding:  40px 0px;
     display: flex;
