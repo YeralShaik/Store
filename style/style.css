@@ -504,39 +504,52 @@ form {
     margin: 0 auto;
 }
 
-.profile-container {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #00417a;
-    padding: 40px 0;
-
-}
-.profile-container h1 {
-    text-align: center;
-    font-size: 32px;
-    padding: 16px;
-}
-
-.profile-container p {
-    font-size: 20px;
-
-}
+.profile-container,
 .purchases-container {
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 40px 0px; 
-    color: #00417a;
-}
+    justify-content: center;
+    color:  var(--colorsecondary-950);;
+    background: #fef1f9b7;
 
+
+}
+.profile-container h1,
 .purchases-container p {
-    border-bottom: 1px solid #00417a4b;
-    font-weight: bold;
-    padding-bottom: 8px;
+    text-align: left;
+    font-size: 24px;
+    padding: 16px;
+    background: var(--colorsecondary-950);
+    color: var(--colorsecondary-50);
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.profile-information {
+    padding: 20px;
+    color: var(--colorsecondary-950);
+    background: #012e5518;
+    width: auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.bi-person-circle {
+    font-size: 60px;
+}
+.greet {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 8px;
+    margin: 0;
+    text-align: center;
+}
+.email-profile {
+    font-size: 16px;
+    padding-bottom: 16px;
+
 }
 
 input {

@@ -115,14 +115,7 @@ function toggleCreateAccount() {
     menuMobile.classList.add('inactive')
 }
 
-function showProfile(profile){
-    hideAllSections()
-    profile.classList.remove('hide')
-    profileIcon.classList.remove('hide')
-    createAccountContainer.classList.add('inactive')
-    loginButton.style.display = 'none'
 
-}
 function toggleShoppingBag() {
     shoppingBagContainer.classList.toggle('inactive')
     loginContainer.classList.add('inactive')
@@ -132,7 +125,13 @@ function toggleShoppingBag() {
 function toggleAccount(){
 
 }
-
+function showProfile(profile){
+    hideAllSections()
+    profile.classList.remove('hide')
+    profileIcon.classList.remove('hide')
+    createAccountContainer.classList.add('inactive')
+    loginButton.style.display = 'none'      
+}
 document.getElementById('formCreateAccount').addEventListener('submit', function(event) {
     event.preventDefault()
 
@@ -143,55 +142,56 @@ document.getElementById('formCreateAccount').addEventListener('submit', function
     const inputName = document.querySelector('.name').value
     const inputEmail = document.querySelector('.email').value
     const password = document.querySelector('.password').value
-    const isValid = true
+    let isValid = true
 
     if (inputName.trim() === '') {
-        document.getElementById('errorName').textContent = 'The name is require';
+        document.getElementById('errorName').textContent = 'The name is require'
+        isValid = false;
+    }  if (inputEmail.trim() === '') {
+        document.getElementById('errorEmail').textContent = 'The email is require'
+        isValid = false; 
+    }
+    else if (!isEmailValid(inputEmail)) {
+        document.getElementById('errorEmail').textContent = 'The email is require'
         isValid = false;
     }
-
-
-    if (inputEmail.trim() === '') {
-        document.getElementById('errorEmail').textContent = 'The email is require';
-        isValid = false
-
-    } else if (!isEmailValid(inputEmail)) {
-        document.getElementById('errorPassword').textContent = 'The password is require';
-        isValid = false;
-    }
-
-
     if (password.trim() === '') {
-        document.getElementById('errorPassword').textContent = 'La contraseña es requerida';
+        document.getElementById('errorPassword').textContent = 'The password is require'
         isValid = false;
     }
 
     if (isValid) {
-     return profile
-            
+     alert(`'Bienvenido' ${inputName}`)
+     showUserProfile(inputName, inputEmail)
     }
-});
 
+})
 function isEmailValid(inputEmail) {
-    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return valid.test(inputEmail);
-
 }
+
+function showUserProfile(name, email) {
     if (profile) {
         profile.innerHTML = `
-            <div class="profile-container">
-                    <h1>My Profile</h1>
-                <p class="greet">Bienvenido:</p>
-                <p>Email: email@example.com</p>
+            <section class="profile-container">
+                <h1>My Profile</h1>
+                    <div class="profile-information">
+                        <i class="bi bi-person-circle"></i>   
+                        <p class="greet">   Hola, ${name}</p>
+                        <p class="email-profile">Email: ${email}</p>
+                    </div>
                 <div class="purchases-container">
                     <p>My Purchases</p>
+                        <div class="profile-information">
+                   
+                        </div>
                 </div>
-            </div>
+            </section>
         `
     } else {
         console.error('Elemento con la clase "profile-container-aside" no encontrado')
     }
 
-
-
+}
 
