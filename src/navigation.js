@@ -1,10 +1,14 @@
 const menuMobileIcon = document.querySelector('.bi-list')
-const menuMobile = document.querySelector('.navbar-mobile')
 const loginButtonMobile = document.querySelector('.login-button-mobile')
-const loginContainer = document.querySelector('.sign-account')
 const loginButton = document.querySelector('.login-button')
+const createSubmitButton = document.querySelector('.button-create')
+const profileIcon = document.querySelector('#profile-icon')
 const createlink = document.querySelector('.create-account-link')
+const menuMobile = document.querySelector('.navbar-mobile')
+const loginContainer = document.querySelector('.sign-account')
 const createAccountContainer = document.querySelector('.create-Account')
+
+
 const shopBagIcon = document.querySelector('.bi-bag-fill')
 const shoppingBagContainer = document.querySelector('.shoppingCart-Container')
 
@@ -24,19 +28,23 @@ const menSection = document.querySelector('.men-section')
 const accesoriesSection = document.querySelector('.accesories-section')
 const electronicSection = document.querySelector('.electronic-section')
 const electronicProductContainer = document.querySelector('.all-electronics-products')
-
+const profile = document.querySelector('.profile-section');
 
 home.addEventListener('click', onClickHome);
 womenCategory.addEventListener('click', () => showSection(womenSection));
 menCategory.addEventListener('click', () => showSection(menSection));
 electronicCategory.addEventListener('click', () => showSection(electronicSection));
 accesoriesCategory.addEventListener('click', () => showSection(accesoriesSection));
+createSubmitButton.addEventListener('click', () => showProfile(profile))
+
 menuMobile.addEventListener('click', onClickMenuMobile);
 menuMobileIcon.addEventListener('click', toggleMenuMobile)
 shopBagIcon.addEventListener('click', toggleShoppingBag)
 loginButtonMobile.addEventListener('click', toggleLogin)
 createlink.addEventListener('click', toggleCreateAccount)
 loginButton.addEventListener('click', toggleLogin)
+profileIcon.addEventListener('click', () => showProfile(profile))
+
 
 function onClickHome() {
     backHome();
@@ -52,8 +60,10 @@ function onClickMenuMobile(event) {
         showSection(menSection);
     } else if (classList.contains('electronic-category')) {
         showSection(electronicSection);
-    } else if (classList.contains('accessories-category')) {
+    } else if (classList.contains('accesories-category')) {
         showSection(accesoriesSection);
+    } else if (classList.contains('profile')) {
+        showProfile(profile)
     }
 }
 
@@ -68,6 +78,7 @@ function hideAllSections() {
     menSection.classList.add('hide')
     accesoriesSection.classList.add('hide')
     electronicSection.classList.add('hide')
+    profile.classList.add('hide')
 }
 
 function backHome() {
@@ -76,6 +87,7 @@ function backHome() {
     productSection.style.display = 'flex'
     electronicBannerSection.style.display = 'flex'
     electronicProductsSection.style.display = 'flex'
+  
 }
 
 function showSection(section) {
@@ -97,24 +109,89 @@ function toggleLogin() {
 
 function toggleCreateAccount() {
     createAccountContainer.classList.toggle('inactive')
+    createSubmitButton.classList.remove('hide')
     loginContainer.classList.add('inactive')
     shoppingBagContainer.classList.add('inactive')
     menuMobile.classList.add('inactive')
 }
 
+function showProfile(profile){
+    hideAllSections()
+    profile.classList.remove('hide')
+    profileIcon.classList.remove('hide')
+    createAccountContainer.classList.add('inactive')
+    loginButton.style.display = 'none'
+
+}
 function toggleShoppingBag() {
     shoppingBagContainer.classList.toggle('inactive')
     loginContainer.classList.add('inactive')
     menuMobile.classList.add('inactive')
     createAccountContainer.classList.add('inactive')
 }
+function toggleAccount(){
 
+}
 
-const modalProductDescription = document.querySelector('.modal-product-Detail')
+document.getElementById('formCreateAccount').addEventListener('submit', function(event) {
+    event.preventDefault()
 
-const productCard = document.querySelector('.product-card')
-productCard.addEventListener('click', toggleModal)
-    function toggleModal() {
-        modalProductDescription.classList.toggle('inactive')
-        console.log('click')
+    document.getElementById('errorName').textContent = ''
+    document.getElementById('errorEmail').textContent = ''
+    document.getElementById('errorPassword').textContent = ''
+
+    const inputName = document.querySelector('.name').value
+    const inputEmail = document.querySelector('.email').value
+    const password = document.querySelector('.password').value
+    const isValid = true
+
+    if (inputName.trim() === '') {
+        document.getElementById('errorName').textContent = 'The name is require';
+        isValid = false;
     }
+
+
+    if (inputEmail.trim() === '') {
+        document.getElementById('errorEmail').textContent = 'The email is require';
+        isValid = false
+
+    } else if (!isEmailValid(inputEmail)) {
+        document.getElementById('errorPassword').textContent = 'The password is require';
+        isValid = false;
+    }
+
+
+    if (password.trim() === '') {
+        document.getElementById('errorPassword').textContent = 'La contraseña es requerida';
+        isValid = false;
+    }
+
+    if (isValid) {
+     return profile
+            
+    }
+});
+
+function isEmailValid(inputEmail) {
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return valid.test(inputEmail);
+
+}
+    if (profile) {
+        profile.innerHTML = `
+            <div class="profile-container">
+                    <h1>My Profile</h1>
+                <p class="greet">Bienvenido:</p>
+                <p>Email: email@example.com</p>
+                <div class="purchases-container">
+                    <p>My Purchases</p>
+                </div>
+            </div>
+        `
+    } else {
+        console.error('Elemento con la clase "profile-container-aside" no encontrado')
+    }
+
+
+
+

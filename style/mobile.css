@@ -215,20 +215,20 @@ form {
 }
 .bannerImg-container {
     max-width: 100%;
-    height: 400px;
+    height: 300px;
 }
 
 .img-banner {
+    display: none;
+   }
+
+   .img-banner-mobile.inactive {
+    display: block;
     width: 100vw;
-    height: 400px;
+    height: 300px;
 
 
 }
-.banner-color {   
-    height: 400px;
-
-}
-
 
 .allproducts-section,
 .allelectronicproducts-section{
@@ -277,10 +277,6 @@ form {
 .electronic-section,
 .accesories-section {
     width: auto;
-    padding: 3rem;
-    margin-top: 100px;  
-
-
 }
 
 .women-products-container,

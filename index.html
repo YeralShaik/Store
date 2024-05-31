@@ -10,16 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body> 
-  
     <header>
         <nav class="navbar">
             <i class="bi bi-bag-heart-fill" id="logoIcon" alt="logo - bolso azul de corazon"></i>
-            
             <i class="bi bi-list inactive"></i>
             <i class="bi bi-bag-fill"></i>
-
             <div class="navbar-menu-desktop inactive">
-                
                 <ul class="menudesktop-list">
                     <li><a href="#home" class="home">Home</a></li>
                     <li><a href="#women" class="women-category">Women</a></li>
@@ -28,14 +24,12 @@
                     <li><a href="#accesories" class="accesories-category">Accesories</a></li>
                 </ul>
                 <div class="line"></div>
-                
-                <button class="login-button">
+                <button class="login-button hide">
                     <i class="bi bi-person-fill"></i>
                     Login
                 </button> 
-                
+                <i id="profile-icon"  class="bi bi-person-fill hide"></i>
             </div>
-            
             <div class="navbar-mobile inactive">
                 <ul class="menumobile-list">
                     <li><a href="#home" class="home">Home</a></li>
@@ -49,7 +43,6 @@
                     </button>
                 </ul>
             </div>
-
             <aside class="shoppingCart-Container inactive">
                 <h1>Shopping Cart</h1>
                 <div class="shoppingCart-products-container">
@@ -68,11 +61,9 @@
                 </div>
                 <div class="total-container">
                     <input class="input-radio"  type="radio" name="" id="">
-
                     <p class="total-prices">$0.00
                         <button class="button-shop">Comprar</button>
                     </p>
-                    
                 </div>
             </aside>
             <aside class="Login-container">
@@ -82,102 +73,96 @@
                     <input type="email" placeholder="Email">
                     <button class="button-continue">Continuar</button>
                 </div>
-                
                 <div class="create-Account inactive">
                     <h1>Crear cuenta</h1>
-                    <form action="submit">
-                        <input type="text" placeholder="Nombre">
-                        <input type="email" placeholder="Correo electronico">
-                        <input type="password" placeholder="Contraseña">
+                    <form id="formCreateAccount" class="form">
+                        <input type="text" class="name" placeholder="Name">
+                        <span id="errorName" class="error"></span>
+                        <input type="email" class="email" placeholder="Email">
+                        <span id="errorEmail" class="error"></span>
+                        <input type="password" class="password" placeholder="Password">
+                        <span id="errorPassword" class="error"></span>
+                        <button type="submit" class="button-create">Crear Cuenta</button>
                     </form>
-                    <button class="button-create">Crear Cuenta</button>
                 </div>
-
             </aside>
         </nav>
     </header>
-    
+    <section class="profile-section hide"></section>
     <section class="banner-section">
-            <img class="img-banner-mobile" src="asset/banner home.png" alt="img banner">
-            <img class="img-banner-mobile inactive" src="asset/banner home-mobile.png" alt="img banner">
-
-
+        <img class="img-banner" src="asset/banner home.png" alt="img banner">
+        <img class="img-banner-mobile inactive" src="asset/banner home-mobile.png" alt="img banner">
     </section>
-
     <section class="products-section"> 
         <h1>Featured Products</h1>
         <div class="allproducts-section"> 
             <div class="product-card"></div>
         </div> 
     </section>
-
     <section class="electronic-banner-section">
-            <img src="asset/BANNER HOMER ELEC.png">
+        <img src="asset/BANNER HOMER ELEC.png">
     </section>
     <section class="products-electronics-section"> 
         <h1>Electronic Products</h1>
-            <div class="allelectronicproducts-section">
-                <div class="product-card"></div>
-            </div>
-        </section>
-
+        <div class="allelectronicproducts-section">
+            <div class="product-card"></div>
+        </div>
+    </section>
     <section class="women-section hide">
         <div>
             <img class="img-banner" src='./asset/banner women.png'>
+            <img class="img-banner-mobile inactive" src="asset/banner women-mobile.png" alt="img banner">
         </div>
         <div class="women-products-container"> 
             <div class="product-card"></div>
         </div>
-        </section>
     </section>
     <section class="men-section hide">
         <div>
-            <img class="img-banner" src='./asset/banner electro-mobile.png'>           
+            <img class="img-banner" src='./asset/banner electro-mobile.png'> 
+            <img class="img-banner-mobile inactive" src="asset/banner men-mobile.png" alt="img banner">         
         </div>
         <div class="men-products-container"> 
             <div class="product-card"></div>
+            <img class="img-banner-mobile inactive" src="asset/banner home.png" alt="img banner">
         </div>
-        </section>
     </section>
     <section class="electronic-section hide">
         <div>
             <img class="img-banner" src='./asset/banner electro.png'>
+            <img class="img-banner-mobile inactive" src="./asset/banner electro-mobile.png" alt="img banner">
         </div>
         <div class="electronic-products-container"> 
             <div class="product-card"></div>
+            <img class="img-banner-mobile inactive" src="asset/banner home.png" alt="img banner">
         </div>
-        
-        </section>
     </section>
     <section class="accesories-section hide">
         <div>
             <img class="img-banner" src='./asset/banner jewerly.png'>
+            <img class="img-banner-mobile inactive" src="asset/banner jewerly-mobile.png" alt="img banner">
         </div>
         <div class="accesories-products-container"> 
             <div class="product-card"></div>
         </div>
-        </section>
     </section>
     <section class="subscribe-section">
         <p>Subscribe to our newsletter</p>
         <input type="text" placeholder="Your email">
         <button>Subscribe</button>
     </section>
-
-    <section class="modal-product-Detail inactive">
+    <aside class="modal-product-Detail hide">
         <div class="product-detail">
             <i class="bi bi-x-circle-fill"></i>
             <img src="" alt="">
             <h1>Producto</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate similique ratione sequi aperiam odit. Quis beatae architecto veritatis necessitatibus excepturi, earum animi modi cum voluptas, esse ullam accusantium voluptate!</p>
         </div>
-    </section>
-
+    </aside>
     <footer>
         <p>Copyright © 2024 </p>
     </footer>
     <script src="./src/navigation.js"></script>
     <script src="./src/index.js"></script>
-</div>
 </body>
 </html>

@@ -212,6 +212,68 @@ form {
     background: #fef1f95e;
 
 }
+
+
+.profile-container-aside {
+    left: 200px;
+
+}
+.profile-container {
+    width: 320px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px; 
+    border-radius: 12px;
+    position: absolute;
+    top: 10px; /* Cambia este valor si es necesario */
+    left: 20px; /* Cambia este valor si es necesario */
+    z-index: 99999;
+    color: #00417a;
+}
+.greet  {
+    padding-top: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-container p {
+    font-size: 16px;
+    text-align: left;
+}
+.title-container {
+    width: 320px;
+    text-align: center;
+    height: 20px;
+    color: #00417a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    border-radius: 0;
+    border-bottom: 1px solid #00417a77;
+    position: absolute;
+    top: 5px; 
+    left: 10px; 
+    z-index: 9999;
+
+}
+
+.purchases-container {
+    width: 320px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px; 
+    position: absolute;
+    top: 190px; /* Cambia este valor si es necesario */
+    left: 20px; /* Cambia este valor si es necesario */
+    z-index: 9999;
+    color: #00417a;
+}
 .banner-section {
     width: auto;
     height: 400px;
@@ -230,21 +292,23 @@ form {
 .textBanner-container h1 {
     font-size: 40px;
 }
+
+.img-banner-mobile.inactive {
+    display: block;
+    width: 100vw;
+    height: 400px;
+
+
+}
 .bannerImg-container {
     max-width: 100%;
     height: 400px;
 }
 
 .img-banner {
-    width: 100vw;
-    height: 400px;
-
-
+ display: none;
 }
-.banner-color {   
-    height: 400px;
 
-}
 
 
 .allproducts-section,
@@ -294,9 +358,6 @@ form {
 .electronic-section,
 .accesories-section {
     width: auto;
-    padding: 3rem;
-    margin-top: 100px;  
-
 
 }
 

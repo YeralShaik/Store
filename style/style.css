@@ -26,20 +26,13 @@ body {
     color: #00417a ;
     margin: 0;
 }
-
-h1 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1rem;
-}
 .hide {
     display: none;
 }
 
 .navbar{
-    width: auto;
+    max-width: 900px;
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +40,7 @@ p {
     color: #00417a;
     font-size: 1.12rem;
     border-bottom: 2px solid var(--colorHover);
-    margin: auto;  
+ 
 }
 .navbar-mobile.inactive,
  .bi-list.inactive,
@@ -83,13 +76,12 @@ p {
 }
 
 .navbar-menu-desktop {
-
     width: auto;
     display: flex;
     justify-content: center;
-   gap: 30px;
-   list-style: none;
-   align-items: center;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
     margin-left: 15vw;
 
 }
@@ -125,7 +117,11 @@ p {
 .bi-person-fill {
     margin-right: 6px;
 }
-
+#profile-icon {
+    color: #00417a;
+    font-size: 28px;
+    cursor: pointer;
+}
 .login-button {
     width: 100px;
     background: #ff63c7;
@@ -139,7 +135,8 @@ p {
 
 }
 
-.bi-bag-fill:hover {
+.bi-bag-fill:hover,
+#profile-icon:hover  {
     color: #f0128c;
 }
 
@@ -222,22 +219,17 @@ button:active {
     border-radius: 8px;
 }
 
-/*Login container */
 .Login-container {
-  
     width: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .sign-account.inactive,
 .create-Account.inactive {
     display: none;
 }
-
 .sign-account{
     width: auto;
     display: flex;
@@ -270,7 +262,6 @@ button:active {
 }
 
 form {
-
     display: flex;
     flex-direction: column;
 }
@@ -304,10 +295,16 @@ form {
     border: 1px solid #006dcc3a;
 }
 
-/*main*/
-
+.img-banner-mobile.inactive {
+    display: none;
+}
+.error {
+    color: red;
+    font-size: 0.6rem;
+    padding-left: 16px;
+    margin-bottom: 16px;
+}
 .banner-section {
-
     width: auto;
     height: 350px;
     display: flex;
@@ -318,14 +315,15 @@ form {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    
-
 }
 .products-section,
 .products-electronics-section {
-    width: auto ;
-    height: auto;
+    max-width: 900px;
+    margin: 0 auto; 
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     flex-direction: column;
     padding: 4rem 12.5rem;
     font-size: 24px;
@@ -333,12 +331,13 @@ form {
 
 .allproducts-section,
 .allelectronicproducts-section{
-    width: auto;
+    max-width: 900px;
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 0px;
-    padding: 20px 80px;
+    padding: 20px 40px;
     gap: 30px;
 }
 .product-card {
@@ -445,6 +444,10 @@ form {
     padding-left: 3rem;
     padding-right: 3rem;
 }
+.modal-product-Detail.hide{
+    display: none;
+}
+
 .modal-product-Detail {
     width: 100%;
     height: 100%;
@@ -453,14 +456,11 @@ form {
     margin: 0;
     z-index: 5;
     background: #0f00079e;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.modal-product-Detail  {
-    display: none;
-}
+
 .product-detail{
     background: #fee5f6;
     width: 50vw;
@@ -494,6 +494,49 @@ form {
     align-items: center;
     gap: 20px;
     
+}
+
+.profile-section {
+    max-width: 900px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.profile-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #00417a;
+    padding: 40px 0;
+
+}
+.profile-container h1 {
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+}
+
+.profile-container p {
+    font-size: 20px;
+
+}
+.purchases-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px; 
+    color: #00417a;
+}
+
+.purchases-container p {
+    border-bottom: 1px solid #00417a4b;
+    font-weight: bold;
+    padding-bottom: 8px;
 }
 
 input {
