@@ -18,9 +18,12 @@ async function fetchData(url) {
 function createProductCard(product) {
     const productCard = document.createElement('div');
     productCard.className = 'product-card'
+    
 
     productCard.innerHTML = `
+        <div class="product-card-img">
         <img src="${product.image}" alt="${product.title}">
+        </div>
         <h3 class="product-name">${product.title}</h3>
         <p class="product-category">${product.category}</p>
         <p class="product-prices">$${product.price.toFixed(2)}
